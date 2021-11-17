@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main_container {
   max-width: 1280px;
   margin: 0 auto;

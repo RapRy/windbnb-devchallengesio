@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./_app.css";
 import Header from "./components/header/Header";
+import List from "./components/list/List";
 import { DataContext } from "./context";
 
 const App = () => {
@@ -19,8 +20,11 @@ const App = () => {
 
   return (
     <div className="main_container">
-      <DataContext.Provider value={{ apartments, setApartments, filtered }}>
+      <DataContext.Provider
+        value={{ apartments, setApartments, filtered, setFiltered }}
+      >
         <Header />
+        <List />
       </DataContext.Provider>
     </div>
   );

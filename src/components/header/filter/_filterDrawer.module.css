@@ -51,3 +51,11 @@
   color: var(--color-primary);
   width: 20px;
 }
+
+@media all and (min-width: 768px) {
+  .location_container span,
+  .guest_container span,
+  .guest_container span.guests {
+    font-size: 0.95rem;
+  }
+}
