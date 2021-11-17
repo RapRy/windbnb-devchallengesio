@@ -22,16 +22,17 @@ const Drawer = () => {
     setShowGuests(true);
   };
 
+  const closeDrawer = () => {
+    setShowDrawer(false);
+  };
+
   return (
     <form action="/" onSubmit={filterItems}>
       <div className={styles.drawer_container}>
         <div className={styles.drawer}>
           <div className={styles.header_container}>
             <p>Edit your search</p>
-            <XIcon
-              className={styles.icon}
-              onClick={() => setShowDrawer(false)}
-            />
+            <XIcon className={styles.icon} onClick={closeDrawer} />
           </div>
           <div className={styles.form_container}>
             <div className={styles.form_field}>

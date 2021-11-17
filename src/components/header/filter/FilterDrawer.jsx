@@ -71,6 +71,10 @@ const FilterDrawer = () => {
     if (showDrawer) setShowDrawer(false);
   };
 
+  const displayDrawer = () => {
+    setShowDrawer(true);
+  };
+
   useEffect(() => {
     if (data.apartments.length > 0 && formData.location.city === "") {
       setFormData({
@@ -94,19 +98,13 @@ const FilterDrawer = () => {
   return (
     <>
       <div className={styles.filter_container}>
-        <div
-          className={styles.location_container}
-          onClick={() => setShowDrawer(true)}
-        >
+        <div className={styles.location_container} onClick={displayDrawer}>
           <span>
             {formData.location.city}, {formData.location.country}
           </span>
         </div>
         <div className={styles.border}></div>
-        <div
-          className={styles.guest_container}
-          onClick={() => setShowDrawer(true)}
-        >
+        <div className={styles.guest_container} onClick={displayDrawer}>
           <span className={formData.guests.total > 0 ? styles.with_guests : ""}>
             {formData.guests.total === 0
               ? "Add guests"

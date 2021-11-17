@@ -1,0 +1,52 @@
+.container {
+  padding: 15px;
+}
+
+.header_container {
+  margin-bottom: 15px;
+}
+
+.header_container h3 {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-black);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.header_container p {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  color: var(--color-gray-200);
+  font-weight: 500;
+}
+
+.input_container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.input_container input {
+  width: 30px;
+  font-size: 1.1rem;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.input_container button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 6px;
+  vertical-align: middle;
+  border: 1px solid var(--color-gray-200);
+}
+
+.icon {
+  color: var(--color-gray-200);
+}

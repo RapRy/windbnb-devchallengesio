@@ -29,3 +29,12 @@
   grid-template-columns: minmax(0, 1fr);
   gap: 30px;
 }
+
+.no_result {
+  margin-top: 60px;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 1.7rem;
+}
