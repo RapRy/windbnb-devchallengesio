@@ -63,7 +63,7 @@
 }
 
 @media all and (min-width: 768px) {
-  .details_container p {
-    flex-grow: 0;
+  .title {
+    font-size: 1rem;
   }
 }

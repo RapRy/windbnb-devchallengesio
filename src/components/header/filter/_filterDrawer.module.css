@@ -17,6 +17,7 @@
 .location_container {
   padding: 20px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .location_container span {
@@ -29,6 +30,7 @@
 .guest_container {
   padding: 20px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .guest_container span {
@@ -45,6 +47,7 @@
 .search_container {
   padding: 20px 15px;
   text-align: center;
+  cursor: pointer;
 }
 
 .search_icon {

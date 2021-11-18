@@ -35,7 +35,11 @@ const Drawer = () => {
             <XIcon className={styles.icon} onClick={closeDrawer} />
           </div>
           <div className={styles.form_container}>
-            <div className={styles.form_field}>
+            <div
+              className={`${styles.form_field} ${
+                showLocation ? styles.form_field_border : ""
+              }`}
+            >
               <label htmlFor="location">LOCATION</label>
               <input
                 type="text"
@@ -46,7 +50,11 @@ const Drawer = () => {
               />
             </div>
             <div className={styles.border}></div>
-            <div className={styles.form_field}>
+            <div
+              className={`${styles.form_field} ${
+                showGuests ? styles.form_field_border : ""
+              }`}
+            >
               <label htmlFor="guests">GUESTS</label>
               <input
                 type="text"
@@ -63,9 +71,20 @@ const Drawer = () => {
                 readOnly
               />
             </div>
+            <div
+              className={`${styles.border} ${styles.border_visibility}`}
+            ></div>
+            <div
+              className={`${styles.form_field} ${styles.form_field_visibility}`}
+            >
+              <button type="submit" className={styles.button}>
+                <SearchIcon className={styles.button_icon} />
+                Search
+              </button>
+            </div>
           </div>
           {showLocation && (
-            <div>
+            <div className={styles.location_container}>
               {locations.map((location, i) => (
                 <div
                   className={styles.location_select}
@@ -79,7 +98,7 @@ const Drawer = () => {
             </div>
           )}
           {showGuests && (
-            <div>
+            <div className={styles.guests_container}>
               <GuestInput
                 heading="Adults"
                 description="Ages 13 or above"
@@ -92,14 +111,16 @@ const Drawer = () => {
               />
             </div>
           )}
-          <div>
-            <button type="submit" className={styles.button}>
-              <SearchIcon className={styles.button_icon} />
-              Search
-            </button>
-          </div>
+          <button
+            type="submit"
+            className={`${styles.button} ${styles.button_visibility}`}
+          >
+            <SearchIcon className={styles.button_icon} />
+            Search
+          </button>
         </div>
       </div>
+      <div className={styles.drawer_bg_opac} onClick={closeDrawer}></div>
     </form>
   );
 };

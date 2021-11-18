@@ -38,3 +38,21 @@
   color: var(--color-black);
   font-size: 1.7rem;
 }
+
+@media all and (min-width: 768px) {
+  .list_container {
+    margin: 0 30px 40px;
+  }
+
+  .items_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .items_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+}
