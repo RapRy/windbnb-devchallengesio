@@ -26,6 +26,9 @@ const App = () => {
         <Header />
         <List />
       </DataContext.Provider>
+      <p className="footer-text">
+        created by <span>Ryan</span> - decChallenges.io
+      </p>
     </div>
   );
 };
